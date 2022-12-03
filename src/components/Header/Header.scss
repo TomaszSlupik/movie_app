@@ -1,0 +1,84 @@
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+  &__img {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    background-image: url("../../../public/img/camera.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    &-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.25);
+        z-index: -1;
+    }
+    &-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 1;
+        font-size: 4rem;
+        text-align: center;
+    }
+  }
+
+}
+
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    &__popularText {
+        font-size: 3rem;
+        padding: 0.4em 0.5em;
+        &-underline {
+            background-color: gold;
+            height: 4px;
+            width: 100px;
+            border-radius: 8px;
+            
+        }
+    }
+    &__card {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--box {
+                position: relative;
+                width: 85%;
+                height: 300px;
+                border: 1px solid gold;
+                box-shadow: 5px 5px 10px black;
+                border-radius: 8px;
+                margin-top: 1em;
+            }
+        }
+        
+
+    }
+}
+
+@media (min-width: 576px) {
+    .header {
+        &__img {
+            background-image: url("../../../public/img/camera_big.jpg");
+            &-text {
+                font-size: 6rem;
+              }
+          }
+    }
+
+}
